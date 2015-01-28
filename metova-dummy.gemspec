@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = Metova::Dummy::VERSION
   spec.authors       = ['Logan Serman']
   spec.email         = ['logan.serman@metova.com']
-  spec.summary       = %q{Small Rails app for other gems to test with}
+  spec.summary       = %q{A small Rails app for other gems to test with}
   spec.description   = spec.summary
   spec.homepage      = 'http://github.com/metova/metova-dummy'
   spec.license       = 'MIT'

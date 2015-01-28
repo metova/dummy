@@ -10,5 +10,5 @@ deploy:
   gem:
     master: metova
   on:
-    repo: metova/metova-dummy
+    repo: metova/dummy
     branch: master
