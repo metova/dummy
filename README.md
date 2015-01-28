@@ -1,22 +1,34 @@
-# Metova::Dummy
+# Metova Dummy
 
-TODO: Write a gem description
+It's a pain to have to setup a testing environment when creating gems. This app includes a Rails skeleton
+that can be included in other gems so that everything is already setup.
+
+Gem functionality can just be patched into existing classes, or you can make your own. For example, to test
+Devise authentication in a gem, you could just make a new controller and inherit from Metova::Dummy::ApplicationController.
+
+```ruby
+class AuthenticationTestController < Metova::Dummy::ApplicationController
+  before_action :authenticate_user!
+  def secret
+    head :ok
+  end
+end
+
+describe AuthenticationTestController do
+  it 'returns a 401 when not authenticated' do
+    get :secret
+    expect(response.status).to eq 401
+  end
+end
+```
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add this line to your gem's gemspec:
 
 ```ruby
-gem 'metova-dummy'
+spec.add_development_dependency 'metova-dummy'
 ```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install metova-dummy
 
 ## Usage
 
