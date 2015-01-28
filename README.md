@@ -4,7 +4,7 @@ It's a pain to have to setup a testing environment when creating gems. This app 
 that can be included in other gems so that everything is already setup.
 
 Gem functionality can just be patched into existing classes, or you can make your own. For example, to test
-Devise authentication in a gem, you could just make a new controller and inherit from Metova::Dummy::ApplicationController.
+Devise authentication in a gem, you could just make a new controller and inherit from `Metova::Dummy::ApplicationController`.
 
 ```ruby
 class AuthenticationTestController < Metova::Dummy::ApplicationController
